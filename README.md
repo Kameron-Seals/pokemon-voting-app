@@ -1,12 +1,111 @@
-# React + Vite
+# 🗳️ Pokémon Starter Voting App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack voting app where users can vote for their favorite (and least favorite) starter Pokémon. Built with React + Node.js and powered by the PokéAPI.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+
+- Vote for favorite and least favorite starter Pokémon  
+- Live results displayed using dynamic pie charts  
+- Podium-style top 3 with type-based color bars  
+- Results page with full rankings  
+- Vote data saved to a local `votes.json` file  
+- Admin reset button with password protection  
+
+---
+
+## 🛠️ Tech Stack
+
+- ⚛️ React + Vite (Frontend)  
+- 📊 Chart.js for data visualization  
+- 🌐 Express.js (Backend API)  
+- 📁 JSON file storage for votes  
+- 🎨 Styled with inline CSS and clean UI components  
+- 🔗 PokéAPI integration for Pokémon data  
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/yourusername/pokemon-voting-app.git
+cd pokemon-voting-app
+```
+
+### Install frontend dependencies:
+
+```bash
+npm install
+```
+
+### Install backend dependencies:
+
+```bash
+cd backend
+npm install
+cd ..
+```
+
+---
+
+## 🧪 Development
+
+### Run the backend:
+
+```bash
+cd backend
+node index.js
+```
+
+### Run the frontend (React):
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## 🔐 Admin Reset
+
+A password-protected reset button is available to clear all votes.
+
+- Password is hardcoded in `backend/index.js` (update it as needed)
+- Sends a POST request to `/reset-votes`
+
+---
+
+## 📁 File Structure
+
+```
+pokemon-voting-app/
+├── backend/
+│   ├── index.js         # Express backend
+│   ├── votes.json       # Stored votes
+├── src/
+│   ├── App.jsx          # Main frontend logic
+│   ├── components/      # PokémonCard, VoteChart, etc.
+│   ├── pages/Results.jsx
+│   └── constants/starters.js
+├── package.json
+├── vite.config.js
+```
+
+---
+
+## ✨ Future Improvements
+
+- User authentication  
+- Deployment to Ubuntu or cloud host  
+- Export results as CSV  
+- Mobile-friendly layout  
+
+---
+
+## 📄 License
+
+MIT — feel free to fork, remix, and use!
